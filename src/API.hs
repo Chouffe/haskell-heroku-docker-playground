@@ -40,7 +40,7 @@ data Handle
 
 fetchConfig :: Environment -> IO Config
 fetchConfig env = do
-  port <- maybe 9090 read <$> lookupEnv "PORT"
+  port <- maybe 80 read <$> lookupEnv "PORT"
   return $ Config port env
 
 type ServerAPI =
