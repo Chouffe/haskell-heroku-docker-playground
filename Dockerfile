@@ -1,5 +1,5 @@
 # Use the existing Haskell image as our base
-FROM haskell:8.0.2
+FROM fpco/stack-build:lts-11.13
 
 # Checkout our code onto the Docker container
 WORKDIR /app
