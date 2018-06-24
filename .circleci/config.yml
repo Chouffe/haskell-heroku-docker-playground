@@ -5,6 +5,12 @@ jobs:
       - image: haskell:8.2.2
     steps:
       - checkout
+      - run: apt-get update
+      - run: apt-get install -y curl
+      - run: curl https://cli-assets.heroku.com/install.sh | sh
+      - run: heroku --version
+        # Connecting to heroku: broken npm for heroku cli throws an exception
+      - run: bash .circleci/setup_heroku.sh
       - restore-cache:
           keys:
             - stack-work-{{checksum "stack.yaml" }}-\
