@@ -1,5 +1,5 @@
 # Use the existing Haskell image as our base
-FROM haskell:8.0.2
+FROM haskell:8.2.2
 
 # Checkout our code onto the Docker container
 WORKDIR /app
