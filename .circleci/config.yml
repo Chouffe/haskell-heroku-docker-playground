@@ -2,7 +2,7 @@ version: 2
 jobs:
   build_project:
     docker:
-      - image: fpco/stack-build:lts-11.13
+      - image: haskell:8.2.2
     steps:
       - checkout
       - restore-cache:
